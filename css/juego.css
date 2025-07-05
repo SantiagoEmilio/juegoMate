@@ -1,30 +1,65 @@
-
 body {
-  font-family: sans-serif;
-  background-color: #fff8f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff8f0;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
+  color: #444;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+h2, h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#puntaje, #nivel {
+  font-size: 1.3rem;
+}
+
+#temporizador {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4caf50;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+/* Cambia el color del temporizador si pasa de 30s */
+#temporizador.tiempo-alto {
+  color: #e53935; /* rojo */
+  font-weight: 900;
+  text-shadow: 0 0 8px rgba(229, 57, 53, 0.8);
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
-  gap: 10px;
+  grid-template-columns: repeat(4, 110px);
+  gap: 15px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
+
 .carta {
   background-color: #ffe0f0;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  height: 100px;
+  border: 3px solid #f48fb1;
+  border-radius: 14px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(244, 143, 177, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
 }
+
 .carta:hover {
   background-color: #ffccdd;
+  box-shadow: 0 6px 18px rgba(244, 143, 177, 0.6);
+  transform: translateY(-4px);
 }
-        
